@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("a.firstlink").addClass("active");
+            $("#whole-body").load("./Pages/mainpage.html");
+
+            $("a.link").click(function() {
+                $("a.link").removeClass("active");
+                $(this).addClass("active");
+                if((this).textContent == "Home") {
+                    $("#whole-body").load("./Pages/mainpage.html");
+                } else if((this).textContent == "About") {
+                    $("#whole-body").load("./Pages/about.html");
+                }
+            })
+
+            $("a.toggle-button").click(function() {
+                if($("div.links").hasClass("link-active")) {
+                    $("div.links").removeClass("link-active");
+                } else {
+                    $("div.links").addClass("link-active");
+                }
+            })
+        })
+    </script>
+</head>
+    <body>
+        <main>
+            <header>
+                <nav id="menu-contaner">
+                    <img class="logo" src="./Pictures/logo.png">
+                    <a href="#" class="toggle-button">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a>
+                    <div class="links">
+                        <ul>
+                            <li><a class="link firstlink">Home</a></li>
+                            <li><a class="link">About</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div id="whole-body"></div>
+        </main>
+        <section class="footer">
+            <div class="social">
+                <a href="https://www.instagram.com/lancey.snyder/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/CnRXoMoX"><i class="fab fa-github"></i></a>
+                <a href="https://discordapp.com/users/604310979798368257/"><i class="fab fa-discord"></i></a>
+            </div>
+            <p class="copyright">
+                Lance Zamora @ 2021
+            </p>
+        </section>
+    </body>
+</html>
