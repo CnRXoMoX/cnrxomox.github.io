@@ -281,11 +281,21 @@ box a {
         display: flex;
     }
 
+    mainpage paragraph {
+        display: inline-block;
+        text-align: center;
+    }
+
     mainpage paragraph li {
         width: 100%;
     }
 
-    mainpage paragraph img {
-        margin-left: 5px;
+    box div.outer-box {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    box div.outer-box {
+        width: 100% ;
     }
 }
