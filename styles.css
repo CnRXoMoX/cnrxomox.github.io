@@ -179,6 +179,24 @@ section {
 
 /* Main Page */
 
+mainpage header {
+    font-family: 'Bebas Neue';
+    color: var(--matteBlack);
+    font-size: 80px;
+    text-align: center;
+    padding-bottom: 10px;
+
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.round-buttom {
+    border-bottom-left-radius: 50% 150px !important;
+    border-bottom-right-radius: 50% 150px !important;
+    height:10px;
+    background-color: var(--yellow);
+}
+ 
 mainpage paragraph {
     margin-top: 40px;
     margin-bottom: 50px;
@@ -248,11 +266,10 @@ box h1 {
 }
 
 box a {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin: 5px;
     display: inline-block;
     text-align: center;
+    margin-bottom: 30px;
+    margin: 5px;
     font-size: 20px;
     color: white;
 }
